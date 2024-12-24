@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 ul {
     list-style: none;
 }
@@ -21,6 +25,12 @@ ul {
 button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-5px);
 }
 
 .title {
@@ -37,9 +47,32 @@ button {
     line-height: 22px;
 }
 
+              /* ======== Стили для Header ========*/
+
 .header {
     background: #0a61f7;
     padding: 14px 0;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1170px; /* 1140 + padding:15*2 */
+    padding: 0 15px;   /* отступы по бокам на мобилках */
+    margin-left: auto; /* центрируем по горизонтали */
+    margin-right: auto; /* центрируем по горизонтали */
+    border: 1px solid red; /* чтобы было видно, потом удалить */
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
 }
 
 .menu-link {
@@ -53,6 +86,17 @@ button {
 
                                 /* ===============Стили для 1-й секции ==============*/
 
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+.main-img {
+    align-self: flex-end;  /* прижмём картинку к нижнему краю родителя */
+}
+
 .main-title {
     color: #363940;
     font-size: 58px;
@@ -60,6 +104,11 @@ button {
     line-height: 68px;
     margin-bottom: 30px;
     }
+
+.main .text {
+    margin-bottom: 40px;
+    max-width: 380px;
+}
 
 .text {
     color: #95a1bb;
@@ -87,6 +136,12 @@ button {
 .rates-section {
     background-color: #f9fafc;
     padding: 100px 0;
+}
+
+.rates-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .rates-section .title {
@@ -153,7 +208,7 @@ th, td {                         /* Стилизуем по названию т�
     color: #0a61f7;
 }
 
-.table-buttn.active {        /* эти свойства применится, если у кнопки будут оба класса */
+.table-button.active {        /* эти свойства применится, если у кнопки будут оба класса */
     background: #0a61f7;
     color: #fff;
 }
@@ -168,6 +223,11 @@ th, td {                         /* Стилизуем по названию т�
     padding: 100px 0;
 }
 
+.account-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .create-account-section .title {
     margin-bottom: 50px;
 }
@@ -175,6 +235,14 @@ th, td {                         /* Стилизуем по названию т�
 .create-account-section .text {
     margin-bottom: 40px;
     max-width: 500px;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .list-item {
@@ -198,6 +266,16 @@ input, select, fieldset, textarea, label, legend, input::placeholder, select::pl
     font-family: inherit;     /* у всех этих элементов будет шрифт, как у ближайшего родителя, в котором указано св-во font-family*/
 }
 
+input[type="radio"], input[type="checkbox"], input[type="date"], select {
+    cursor: pointer;
+}
+
+.fields-wrapper {
+    display: flex;
+    flex-wrap: wrap;       /* будут скидывать вниз, когда не помещаются в родителе*/
+    gap: 20px;
+}
+
 input[type="text"] {
     width: 100%;
 }
@@ -205,6 +283,13 @@ input[type="text"] {
 input[type="email"], input[type="password"], input[type="date"], select {
     width: 230px;
     height: 50px;
+    flex-grow: 1;
+}
+
+.stack,
+fieldset {
+    display: flex;
+    column-gap: 30px;
 }
 
 fieldset {

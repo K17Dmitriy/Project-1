@@ -11,31 +11,44 @@
 </head>
 <body>
     <header class="header">
-        <a href="" class="logo">
-            <img src="./assets/images/Logo.svg" alt="logo">
-        </a>
-        <ul class="menu">
-            <li class="menu-item">
-                <a href="" class="menu-link">Main</a>
-            </li>
-            <li class="menu-item">
-                <a href="" class="menu-link">Rates</a>
-            </li>
-            <li class="menu-item">
-                <a href="" class="menu-link">Create Account</a>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="" class="logo">
+                    <img src="./assets/images/Logo.svg" alt="logo">
+                </a>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Main</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Rates</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Create Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
     <section class="main">
-        <h1 class="main-title">Markup achievement</h1>
-        <p class="text">The harder you work for something, the greater you’ll feel when you achieve it.</p>
-        <button class="button">LEARN MORE</button>
-        <img class="main-img" src="./assets/images/image.png" alt="image">
+        <div class="container">
+            <div class="main-wrapper">
+                <div class="main-info">
+                    <h1 class="main-title">Markup achievement</h1>
+                        <p class="text">The harder you work for something, the    greater you’ll           feel when you achieve it.</p>
+                        <button class="button">LEARN MORE</button>
+                </div>
+                        <img class="main-img" src="./assets/images/image.png" alt="image">
+            </div>  
+        </div> 
     </section>
+    
     <section class="rates-section">
-        <h2 class="title">Rates</h2>
-        <p class="text">Failure will never overtake me if my determination to succeed is strong enough.</p>
-        <table class="table">
+        <div class="container">
+            <div class="rates-wrapper">
+                <h2 class="title">Rates</h2>
+                    <p class="text">Failure will never overtake me if my determination to succeed is strong enough.</p>
+                    <table class="table">
             <tr>
                 <th class="table-subtitle gray">Features</th>
                 <th class="table-title">Standart</th>
@@ -62,22 +75,31 @@
             </tr>
             <tr>
                 <th class="table-subtitle"><a href="" class="table-link">Have questons?</a></th>
-                <th><button class="table-button">get now</button></th>
-                <th><button class="table-button active">get now</button></th>
-                <th><button class="table-button">get now</button></th>
+                <td><button class="table-button">get now</button></td>
+                <td><button class="table-button active">get now</button></td>
+                <td><button class="table-button">get now</button></td>
             </tr>
-        </table>
+                    </table>
+            </div>
+            
+        </div> 
     </section>
+    
     <section class="create-account-section">
-        <h2 class="title">Create your free account</h2>
-        <p class="text">Let us first talk about dreams. We all know that dreams do play a role in our daily lives. The majority of people pay little attention to dreams. Dreams can help us find solutions to our daily problems and see things from a different perspective. Whenever we are dreaming, we can be who or what we want to be, regardless of the fact that in real life.</p>
-        <ul class="list">
-            <li class="list-item">Easy setup, fast start</li>
-            <li class="list-item">Free forever for core features</li>
-            <li class="list-item">14-day trial of premium features</li>
-        </ul>
-        <form>
+        <div class="container">
+            <div class="account-wrapper">
+                <div class="account-info-wrapper">
+                <h2 class="title">Create your free account</h2>
+                <p class="text">Let us first talk about dreams. We all know that dreams do play a role in our daily lives. The majority of people pay little attention to dreams. Dreams can help us find solutions to our daily problems and see things from a different perspective. Whenever we are dreaming, we can be who or what we want to be, regardless of the fact that in real life.</p>
+                <ul class="list">
+                <li class="list-item">Easy setup, fast start</li>
+                <li class="list-item">Free forever for core features</li>
+                <li class="list-item">14-day trial of premium features</li>
+                </ul>
+                </div>
+            <form>
             <input type="text" placeholder="Full Name">
+            <div class="fields-wrapper">
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
             <input type="date">
@@ -87,7 +109,8 @@
                 <option value="">China</option>
                 <option value="">USA</option>
             </select>
-            <div>
+            </div>
+            <div class="stack">
             <label for="front">
                 <input id="front" type="radio" name="stack" checked>
                 Frontend
@@ -124,8 +147,10 @@
 
             <textarea placeholder="Something else about you..."></textarea>
 
-            <input type="submit">
-        </form>
+            <button class="button" type="submit">registration</button>
+            </form>
+            </div>    
+        </div>   
     </section>
     <footer>
         <small>Copyright © 2023. All rights reserved.</small>
