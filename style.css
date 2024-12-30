@@ -8,6 +8,7 @@ html,
 body {
     font-family: 'Rubik', sans-serif;
     font-style: normal;
+    min-width: 375px;
 }
 
 a {
@@ -67,7 +68,6 @@ button:hover {
     padding: 0 15px;   /* отступы по бокам на мобилках */
     margin-left: auto; /* центрируем по горизонтали */
     margin-right: auto; /* центрируем по горизонтали */
-    border: 1px solid red; /* чтобы было видно, потом удалить */
 }
 
 .menu {
@@ -84,13 +84,17 @@ button:hover {
     text-transform: uppercase;
     }
 
+.menu-icon {
+    display: none;
+}
+
                                 /* ===============Стили для 1-й секции ==============*/
 
 .main-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    min-height: 800px;
 }
 
 .main-img {
@@ -131,6 +135,12 @@ button:hover {
     text-transform: uppercase;
 }
 
+.main-img {
+    align-self: flex-end;
+    max-width: 656px;
+    width: 100%;
+}
+
                                 /* ===============Стили для 2-й секции ==============*/
 
 .rates-section {
@@ -150,6 +160,7 @@ button:hover {
 
 .rates-section .text {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .title {
@@ -329,3 +340,78 @@ small {
     line-height: 22px;
     color: #fff;
 }
+
+                              /* =============== Адаптив под планшеты ==============*/
+
+@media screen and (max-width: 1400px) {
+    .main-wrapper {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+.main-info {
+    align-self: flex-start;
+    margin: 100px 0 80px;
+    }
+
+.main-img {
+    align-self: center;
+    }
+
+.table {
+    width: 940px;
+    }
+
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 940px;
+    }
+
+.account-wrapper {
+    flex-direction: column;
+    gap: 70px;
+    }
+
+.create-account-section {
+    max-width: unset;       /* отменяем максимальную ширину */
+    }
+
+form {
+    align-self: center;
+    }
+}
+
+                        /* =============== Адаптив под мобильную версию ==============*/
+
+@media screen and (max-width: 576px) {
+    .menu {
+        display: none;
+        }
+    
+    .menu-icon {
+        display: block;
+        }
+
+    .main-info {
+        margin: 60px 0;
+        }
+    
+    .main-title {
+        font-size: 52px;
+        line-height: 60px;
+        }
+
+    .account-wrapper {
+        gap: 60px;
+        }
+
+    label {
+        white-space: nowrap;
+    }
+
+    fieldset {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+}                       
